@@ -1,0 +1,5 @@
+<template>
+    <template for:each={logEntries} for:item="logEntry">
+        <div key={logEntry.Id}>{logEntry.Log_Lines__c}</div>
+    </template>
+</template>

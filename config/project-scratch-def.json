@@ -1,0 +1,32 @@
+{
+    "orgName": "Acme",
+    "country": "DK",
+    "language": "en_US",
+    "edition": "Enterprise",
+    "features": [
+        "Communities", 
+        "ServiceCloud", 
+        "Chatbot", 
+        "Sites", 
+        "LightningSalesConsole", 
+        "LightningServiceConsole", 
+        "API", 
+        "AuthorApex", 
+        "CascadeDelete", 
+        "AddCustomApps:1", 
+        "DebugApex", "ProcessBuilder", "Workflow"],
+    "settings": {
+        "orgPreferenceSettings": {
+            "networksEnabled": true,
+            "s1DesktopEnabled": true,
+            "s1EncryptedStoragePref2": false
+        },
+        "omniChannelSettings": {
+            "enableOmniChannel": true
+        },
+  
+        "caseSettings": {
+            "systemUserEmail": "support@acme.com"
+        }
+    }
+  } 
