@@ -21,19 +21,17 @@
         // Get the empApi component
         const empApi = component.find('empApi');
 
-        // Get the channel from the input box
-        const channel = component.find('channel').get('v.value');
-
+        const channel = '/event/Debug_Event__e';
         // Replay option to get new events
         const replayId = -1;
 
         // Subscribe to an event
         empApi.subscribe(channel, replayId, $A.getCallback(eventReceived => {
             // Process event (this is called each time we receive an event)
-            console.log('Received event ', JSON.stringify(eventReceived));
-            var logEntries = component.get("v.logEntries");
-            logEntries.push(eventReceived.data.payload);
-            component.set("v.logEntries", logEntries);            
+            console.log('Received event ', JSON.parse(JSON.stringify(eventReceived)));
+            var events = component.get("v.events");
+            events.push(eventReceived);
+            component.set("v.events", events);            
         }))
         .then(subscription => {
 
