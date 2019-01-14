@@ -21,7 +21,14 @@ public class Logger {
 
         addLogEntry(
             String.format('Trace|{0}|{1}|{2}|{3}|{4}|{5}|{6}', 
-            new String[]{username, systemTime.format(), className, methodName, String.valueOf(currentDML), String.valueOf(currentSOQL), message})
+            new String[]{
+                username, 
+                systemTime.format(), 
+                className, methodName, 
+                String.valueOf(currentDML), 
+                String.valueOf(currentSOQL), 
+                message
+            })
         );
     }
 

@@ -1,0 +1,29 @@
+<template>
+    <template if:false={isException}>
+        <div class="trace">
+            <pre>
+                <span>{transformedLogLine.systemTime}</span>
+                &nbsp;&vert;&nbsp;
+                <span>{transformedLogLine.username}</span>
+                &nbsp;&vert;&nbsp;
+                <span>{transformedLogLine.className}.{transformedLogLine.methodName}</span>
+                &nbsp;&vert;&nbsp;
+                <span>{transformedLogLine.currentDml}</span>
+                &nbsp;&vert;&nbsp;
+                <span>{transformedLogLine.currentSoql}</span>
+                <div>{transformedLogLine.message}</div>
+            </pre>
+        </div>
+    </template>
+    <template if:true={isException}>
+        <div class="exception">
+            <pre>
+                <span>{transformedLogLine.systemTime}</span>
+                &nbsp;&vert;&nbsp;
+                <span>{transformedLogLine.username}</span>
+                <div>{transformedLogLine.message}</div>
+                <div>{transformedLogLine.stackTraceString}</div>
+            </pre>
+        </div>
+    </template>
+</template>

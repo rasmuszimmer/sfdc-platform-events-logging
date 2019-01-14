@@ -1,5 +1,8 @@
 <template>
-    <template for:each={logLines} for:item="logLine">
-        <div key={logLine.Id}>{logLine}</div>
-    </template>
+    <div class="background slds-p-around_medium">
+        <template for:each={logLines} for:item="logLine">
+             <!-- <div key={logLine.Id}>{logLine}</div> -->
+            <c-platform-events-log-line key={logLine.Id} logline={logLine}></c-platform-events-log-line>
+        </template>
+    </div>
 </template>
