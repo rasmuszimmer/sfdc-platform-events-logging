@@ -3,6 +3,9 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/platform-events-log-line": [
+                "platformEventsLogLine/platformEventsLogLine.js"
+            ],
             "c/platform-events-log-output": [
                 "platformEventsLogOutput/platformEventsLogOutput.js"
             ]

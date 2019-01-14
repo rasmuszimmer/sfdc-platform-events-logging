@@ -20,5 +20,7 @@ public with sharing class AccountTriggerHandler {
         } catch (Exception ex) {
            Logger.logException(ex);
         }
+
+        test.testLog();
     }
 }
