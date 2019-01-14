@@ -1,12 +1,14 @@
 public class Logger {
 
+    private static final String DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.SSS';
+
     private static List<String> logEntries;
     private static Integer totalLogSizeInChars;
     private static Integer maxLogSizeInChars = SObjectType.Debug_Event__e.Fields.Log_Lines__c.Length;
 
     static {
         reset();
-        logTrace('New transaction started');
+        logTrace('*** New transaction started ***');
     }
 
     public static void logTrace(String message){
@@ -23,7 +25,7 @@ public class Logger {
             String.format('Trace|{0}|{1}|{2}|{3}|{4}|{5}|{6}', 
             new String[]{
                 username, 
-                systemTime.format(), 
+                systemTime.format(DATE_FORMAT), 
                 className, methodName, 
                 String.valueOf(currentDML), 
                 String.valueOf(currentSOQL), 
@@ -41,7 +43,7 @@ public class Logger {
 
         addLogEntry(
             String.format('Exception|{0}|{1}|{2}|{3}', 
-            new String[]{username, systemTime.format(), message, stackTraceString})
+            new String[]{username, systemTime.format(DATE_FORMAT), message, stackTraceString})
         );
     }
 
@@ -55,6 +57,21 @@ public class Logger {
 
         reset();
     }
+
+    // private static void transactionStart(){
+    //     String username = UserInfo.getUserName();
+    //     Datetime systemTime = Datetime.now();
+    //     String message = '*** New transaction started ***';
+
+    //     addLogEntry(
+    //         String.format('TransactionStart|{0}|{1}|{2}', 
+    //         new String[]{
+    //             username, 
+    //             systemTime.format(DATE_FORMAT), 
+    //             message
+    //         })
+    //     );
+    // }
 
     private static void addLogEntry(String logEntry){
         totalLogSizeInChars += logEntry.length();
