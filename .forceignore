@@ -4,6 +4,9 @@
 
 package.xml
 AppSwitcher.appMenu
+LightningSalesConsole_UtilityBar.flexipage-meta.xml
+LightningService_UtilityBar.flexipage-meta.xml
+
 **/jsconfig.json
 
 **/.eslintrc.json
