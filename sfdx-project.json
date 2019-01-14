@@ -4,8 +4,7 @@
             "path": "force-app",
             "default": true,
             "package": "PlatformEventsLogger",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT"
+            "versionNumber": "0.2.0.NEXT"
         }
     ],
     "namespace": "",
@@ -13,6 +12,8 @@
     "sourceApiVersion": "45.0",
     "packageAliases": {
         "PlatformEventsLogger": "0HoB0000000TN60KAG",
-        "PlatformEventsLogger@0.1.0-1": "04tB0000000PevKIAS"
+        "PlatformEventsLogger@0.1.0-1": "04tB0000000PevKIAS",
+        "PlatformEventsLogger@0.1.0-2": "04tB0000000PezXIAS",
+        "PlatformEventsLogger@0.2.0-1": "04tB0000000PezcIAC"
     }
 }
