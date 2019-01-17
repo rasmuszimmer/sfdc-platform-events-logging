@@ -26,7 +26,8 @@ public class Logger {
             new String[]{
                 username, 
                 systemTime.format(DATE_FORMAT), 
-                className, methodName, 
+                className, 
+                methodName, 
                 String.valueOf(currentDML), 
                 String.valueOf(currentSOQL), 
                 message
@@ -83,6 +84,10 @@ public class Logger {
     }
 
     private static String getClassName(String line){
+        
+        if(line.contains('AnonymousBlock')){
+            return 'AnonymousBlock';
+        }
         if (line.startsWith('Class.')){
             line = line.substringAfter('Class.');
         }
@@ -91,6 +96,9 @@ public class Logger {
     }    
 
     private static String getMethod(String line){
+        if(line.contains('AnonymousBlock')){
+            return 'AnonymousBlock';
+        }
         return line.substringBefore(':').substringAfterLast('.');
     }
 
