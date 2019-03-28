@@ -3,18 +3,14 @@
         {
             "path": "force-app",
             "default": true,
-            "package": "PlatformEventsLogger",
-            "versionNumber": "0.2.0.NEXT"
+            "package": "PlatformEventsLogger2",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
         }
     ],
-    "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "45.0",
     "packageAliases": {
-        "PlatformEventsLogger": "0HoB0000000TN60KAG",
-        "PlatformEventsLogger@0.1.0-1": "04tB0000000PevKIAS",
-        "PlatformEventsLogger@0.1.0-2": "04tB0000000PezXIAS",
-        "PlatformEventsLogger@0.2.0-1": "04tB0000000PezcIAC",
-        "PlatformEventsLogger@0.2.0-2": "04tB0000000PgbvIAC"
+        "PlatformEventsLogger2": "0Ho4H000000XZB0SAO"
     }
 }
